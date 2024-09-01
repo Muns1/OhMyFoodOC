@@ -52,6 +52,14 @@ hr {
   border-top: 1px solid #ccc;
 }
 
+@keyframes opacityAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 header .ohmyfood h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 30px;
@@ -101,57 +109,82 @@ header .emplacement h2 {
 .exploration .exploration-bouton {
   margin-top: 27px;
   display: flex;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   padding: 13px 18.75px;
   border-radius: 25px;
   color: white;
+  cursor: pointer;
   font-weight: 500;
   font-style: normal;
   line-height: 18.75px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: all 0.8s ease-in-out;
+}
+.exploration .exploration-bouton:hover {
+  animation: opacityAnimation 0.8s forwards;
 }
 
-.fonc-body {
-  margin: 48px 20px;
-}
 .fonc-body h3 {
   font-size: 24px;
   font-weight: 700;
-  font-style: normal;
-  line-height: 28.13px;
+  margin: 48px 0px 26px 20px;
 }
 .fonc-body .fonctionnement-liste {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 25px 25px 25px 33px;
+  margin: 20px;
+  margin-left: 32.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .fonc-body .fonctionnement-liste .fonctionnement-numero {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #9356DC;
-  color: white;
+  color: #fff;
   border-radius: 50%;
   width: 24px;
   height: 24px;
+}
+.fonc-body .fonctionnement-liste .fonctionnement-numero span {
+  display: inline-block;
+  line-height: 35px;
+}
+.fonc-body .fonctionnement-liste .fonctionnement-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  font-weight: 500;
+  color: #333;
 }
 .fonc-body .fonctionnement-liste .fonctionnement-content i {
-  margin-right: 10px;
+  margin-right: 20px;
+  color: #7E7E7E;
+  font-size: 20px;
 }
 .fonc-body .fonctionnement-liste .fonctionnement-content p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  margin: 0;
+  line-height: 18.75px;
 }
 
-.restaurant-card {
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 48px 0px 26px 20px;
+}
+
+.restaurant-body {
+  background-color: #f6f6f6;
+}
+.restaurant-body .restaurant-card {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -159,53 +192,50 @@ header .emplacement h2 {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   margin: 18px;
 }
-.restaurant-card img {
+.restaurant-body .restaurant-card img {
   width: 100%;
   height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant-card .card-content {
+.restaurant-body .restaurant-card .card-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 13px;
 }
-.restaurant-card .card-content .card-txt {
+.restaurant-body .restaurant-card .card-content .card-txt {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.restaurant-card .card-content .card-txt .card-title {
+.restaurant-body .restaurant-card .card-content .card-txt .card-title {
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
   margin: 0;
 }
-.restaurant-card .card-content .card-txt .card-subtitle {
+.restaurant-body .restaurant-card .card-content .card-txt .card-subtitle {
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
   margin: 0;
 }
-.restaurant-card .card-content .card-like {
+.restaurant-body .restaurant-card .card-content .card-like {
   font-size: 21px;
   color: #101010;
 }
-.restaurant-card .card-content .card-like i {
+.restaurant-body .restaurant-card .card-content .card-like i {
   cursor: pointer;
+  display: inline-block;
 }
-.restaurant-card .card-content .card-like i:hover {
+.restaurant-body .restaurant-card .card-content .card-like i:hover {
   color: #333;
 }
-.restaurant-card .card-ribbon {
+.restaurant-body .restaurant-card .card-ribbon {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -224,7 +254,7 @@ header .emplacement h2 {
 .footer-card {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 25px;
   width: 100%;
   font-family: Arial, sans-serif;
 }
@@ -234,6 +264,7 @@ header .emplacement h2 {
   font-weight: 400;
   font-style: italic;
   line-height: 26.24px;
+  margin-bottom: 16px;
 }
 .footer-card .footer-links {
   list-style: none;
@@ -242,9 +273,6 @@ header .emplacement h2 {
 }
 .footer-card .footer-links li {
   margin: 10px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
   font-size: 14px;
 }
@@ -254,4 +282,22 @@ header .emplacement h2 {
 }
 .footer-card .footer-links li:last-child {
   margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1024px) {
+  .restaurant-card {
+    width: 34%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 82px;
+         column-gap: 82px;
+    row-gap: 32px;
+  }
 }/*# sourceMappingURL=styles.css.map */

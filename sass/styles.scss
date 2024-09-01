@@ -1,6 +1,7 @@
 @import 'utils/_mixins';
 @import 'utils/_variables.scss';
 @import 'base/_reset.scss';
+@import 'utils/_keyframes.scss';
 
 // Header
 header {
@@ -46,64 +47,103 @@ header {
     .exploration-bouton {
       margin-top: 27px;
       display: flex;
-      background: linear-gradient(193.33deg, $main-color -11.44%, #FF79DA 123.93%);
+      background: linear-gradient(0deg, $main-color -11.44%, #FF79DA 123.93%);
       padding: 13px 18.75px;
       border-radius: 25px;
       color: white;
+      cursor: pointer;
       @include font(null, null, 500, 18.75px);
       @include box-shadow($shadow-small);
+      transition: all 0.8s ease-in-out;
+
+      &:hover {
+        animation: opacityAnimation 0.8s forwards;
+      }
     }
   }
+
+
   
   // Fonctionnement
+
   .fonc-body {
-    margin: 48px 20px;
-  
+    
     h3 {
-      @include font(null, 24px, 700, 28.13px);
+      font-size: 24px;
+      font-weight: 700;
+      margin: 48px 0px 26px 20px;
     }
   
     .fonctionnement-liste {
-      @include flex-center;
-      background-color: $secondary-bg-color;
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      @include box-shadow($shadow-medium);
+      position: relative;
+      background-color: $main-bg-color;
+      border-radius: 15px;
+      padding: 25px 25px 25px 33px;
+      margin: 20px;
+      margin-left: 32.50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
   
       .fonctionnement-numero {
-        background-color: $main-color;
-        color: white;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 10px;
-        font-weight: 500;
+        background-color: $main-color; 
+        color: #fff;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+  
+        span {
+          display: inline-block;
+          line-height: 35px;
+        }
       }
   
       .fonctionnement-content {
+        display: flex;
+        align-items: center;
+        color: #333;
+  
         i {
-          margin-right: 10px;
+          margin-right: 20px;
+          color: $icon-color;
+          font-size: 20px;
         }
+  
         p {
           font-size: 16px;
-          font-weight: 400;
+          font-weight: 500;
+          margin: 0;
+          line-height: 18.75px;
         }
       }
     }
   }
   
   // Restaurants
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 48px 0px 26px 20px;
+  }
+  .restaurant-body {
+    background-color: $main-bg-color;
+
   .restaurant-card {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     @include box-shadow($shadow-small);
     font-family: Arial, sans-serif;
-    @include flex-center(column, center, flex-start);
+    display: flex;
+    flex-direction: column;
     margin: 18px;
   
     img {
@@ -113,8 +153,9 @@ header {
     }
   
     .card-content {
-      @include flex-center;
+      display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 13px;
   
       .card-txt {
@@ -134,9 +175,10 @@ header {
       .card-like {
         font-size: 21px;
         color: #101010;
-  
+
         i {
           cursor: pointer;
+          display: inline-block;
   
           &:hover {
             color: #333;
@@ -157,18 +199,20 @@ header {
       @include box-shadow($shadow-large);
     }
   }
+  }
   
   // Footer
   .footer-card {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 25px;
     width: 100%;
     font-family: Arial, sans-serif;
   
     .footer-logo {
       h5 {
         @include font($font-secondary, 18px, 400, 26.24px, italic);
+        margin-bottom: 16px;
       }
     }
   
@@ -179,7 +223,7 @@ header {
   
       li {
         margin: 10px 0;
-        @include flex-center;
+        align-items: center;
         font-size: 14px;
   
         i {
@@ -189,7 +233,27 @@ header {
         
         &:last-child {
           margin-top: 15px;
+          margin-bottom: 0px;
         }
       }
     }
   }
+
+
+// Media queries
+
+@media (min-width: 1024px) {
+  .restaurant-card {
+      width: 34%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 82px;
+    row-gap: 32px;
+  }
+}
