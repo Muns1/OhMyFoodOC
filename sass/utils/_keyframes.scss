@@ -6,3 +6,13 @@
       opacity: 0.8;
     }
   }
+
+  @keyframes flashAnimation {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }    
+  }

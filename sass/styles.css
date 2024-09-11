@@ -60,10 +60,20 @@ hr {
     opacity: 0.8;
   }
 }
+@keyframes flashAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
 header .header__logo {
   display: flex;
   justify-content: center;
   padding: 14px 0 5px 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 header .header__logo .header__logo-image {
   height: 44px;
@@ -77,6 +87,7 @@ header .header__location {
   gap: 17px;
   background-color: #EAEAEA;
   padding: 15.5px 0;
+  z-index: 2;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 header .header__location i.fa-location-dot {
@@ -104,6 +115,7 @@ header .header__location h2 {
   font-weight: 700;
   font-style: normal;
   line-height: 28.13px;
+  margin: 0px 0px 12px 0px;
 }
 .exploration .exploration__button {
   margin-top: 27px;
@@ -271,17 +283,33 @@ h3 {
   margin: 0;
 }
 .footer__content .footer__links li {
-  margin: 10px 0;
+  margin: 7px 0;
+  display: flex;
   align-items: center;
   font-size: 14px;
 }
 .footer__content .footer__links li i {
-  margin-right: 8px;
-  font-size: 16px;
+  margin-right: 4px;
+  font-size: 13px;
 }
-.footer__content .footer__links li:last-child {
-  margin-top: 15px;
-  margin-bottom: 0px;
+.footer__content .footer__links li.fa-utensils i {
+  width: 11px;
+  height: 13px;
+}
+.footer__content .footer__links li.fa-handshake-angle i {
+  width: 11.92px;
+  height: 13px;
+}
+
+.flash__animation {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: flashAnimation 2s forwards;
 }
 
 @media (min-width: 1024px) {

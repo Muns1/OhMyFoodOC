@@ -9,6 +9,8 @@ header {
         display: flex;
         justify-content: center;
         padding: 14px 0 5px 0;
+        @include box-shadow($shadow-small);
+
         .header__logo-image {
           height: 44px;
           width: 162px;
@@ -20,6 +22,7 @@ header {
       gap: 17px;
       background-color: #EAEAEA;
       padding: 15.5px 0;
+      z-index: 2;
       @include box-shadow($shadow-small);
   
       i.fa-location-dot {
@@ -43,6 +46,7 @@ header {
   
     h3 {
       @include font(null, 24px, 700, 28.13px);
+      margin: 0px 0px 12px 0px;
     }
   
     .exploration__button {
@@ -223,22 +227,41 @@ header {
       margin: 0;
   
       li {
-        margin: 10px 0;
+        margin: 7px 0;
+        display: flex;
         align-items: center;
         font-size: 14px;
   
         i {
-          margin-right: 8px;
-          font-size: 16px;
+          margin-right: 4px;
+          font-size: 13px;
         }
-        
-        &:last-child {
-          margin-top: 15px;
-          margin-bottom: 0px;
+  
+        &.fa-utensils i {
+          width: 11px;
+          height: 13px;
+        }
+  
+        &.fa-handshake-angle i {
+          width: 11.92px;
+          height: 13px;
         }
       }
     }
   }
+
+// Animations pour page restaurants
+
+.flash__animation {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: flashAnimation 2s forwards;
+}
 
 
 // Media queries
