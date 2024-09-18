@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: 100%;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #fff;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes flashAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.header__logo-lapalette {
+  height: 275px;
+}
+
+.menu {
+  position: absolute;
+  background-color: #f6f6f6;
+  padding: 32px 12px 40px 12px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  top: 283px;
+  width: 100vw;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title i {
+  line-height: 1;
+  font-size: 28px;
+  margin-top: -42px;
+  margin-right: 29px;
+}
+.menu h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40.82px;
+  margin: 0px 4px 42px 4px;
+}
+.menu .menu__section {
+  margin-bottom: 40px;
+}
+.menu .menu__section-title {
+  margin-bottom: 21px;
+}
+.menu .menu__section h2 {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 18.75px;
+  position: relative;
+  display: inline-block;
+}
+.menu .menu__section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.menu .menu__section .menu__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.menu .menu__section .menu__item-title {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21.09px;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+.menu .menu__section .menu__item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .menu__section .menu__item-description {
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17.63px;
+}
+.menu .menu__section .menu__item-price {
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 17.63px;
+  white-space: nowrap;
+}/*# sourceMappingURL=restaurants.css.map */
