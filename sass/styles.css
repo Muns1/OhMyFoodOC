@@ -70,6 +70,8 @@ hr {
   }
 }
 header .header__logo {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   padding: 14px 0 5px 0;
@@ -80,6 +82,7 @@ header .header__logo .header__logo-image {
   width: 162px;
 }
 header .header__location {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,7 +90,6 @@ header .header__location {
   gap: 17px;
   background-color: #EAEAEA;
   padding: 15.5px 0;
-  z-index: 2;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 header .header__location i.fa-location-dot {
@@ -200,7 +202,6 @@ h3 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   margin: 18px;
@@ -236,6 +237,7 @@ h3 {
   margin: 0;
 }
 .restaurants .restaurants__card .card-content .restaurants__card-like {
+  position: relative;
   font-size: 21px;
   color: #101010;
 }
@@ -260,6 +262,10 @@ h3 {
   line-height: 16.41px;
   color: #008766;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+a {
+  box-shadow: none;
 }
 
 .footer__content {
@@ -313,11 +319,19 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+  .functionality h3, h3 {
+    padding: 30px 0px 0px 180px;
+    margin: 0px;
+  }
+  .exploration h3 {
+    padding: 0;
+  }
+  .restaurants h3 {
+    margin-top: 48px;
+  }
   .restaurants__card {
-    width: 34%;
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
   .restaurants__cards {
     display: flex;
@@ -326,5 +340,21 @@ h3 {
     -moz-column-gap: 82px;
          column-gap: 82px;
     row-gap: 32px;
+  }
+  .functionality__media {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 150px;
+    margin-right: 207px;
+    gap: 24px;
+  }
+  .functionality__media .functionality__step {
+    width: 100%;
+  }
+  .footer__links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -6,6 +6,8 @@
 // Header
 header {
     .header__logo {
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: center;
         padding: 14px 0 5px 0;
@@ -18,11 +20,11 @@ header {
     }
   
     .header__location {
+      position: relative; 
       @include flex-center;
       gap: 17px;
       background-color: #EAEAEA;
       padding: 15.5px 0;
-      z-index: 2;
       @include box-shadow($shadow-small);
   
       i.fa-location-dot {
@@ -146,7 +148,6 @@ header {
     border-radius: 10px;
     overflow: hidden;
     @include box-shadow($shadow-small);
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     margin: 18px;
@@ -178,6 +179,7 @@ header {
       }
   
       .restaurants__card-like {
+        position: relative;
         font-size: 21px;
         color: #101010;
 
@@ -205,6 +207,12 @@ header {
     }
   }
   }
+
+
+  a {
+    box-shadow: none;
+  }
+
   
   // Footer
   .footer__content {
@@ -249,6 +257,7 @@ header {
       }
     }
   }
+  
 
 // Animations pour page restaurants
 
@@ -263,16 +272,33 @@ header {
   animation: flashAnimation 2s forwards;
 }
 
+// Animation coeur
+
+
 
 // Media queries
 
 @media (min-width: 1024px) {
-  .restaurants__card {
-      width: 34%;
-      height: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+  .functionality h3, h3 {
+    padding: 30px 0px 0px 180px;
+    margin: 0px
   }
+
+  .exploration h3 {
+    padding: 0;
+  }
+
+  .restaurants h3 {
+    margin-top: 48px;
+  }
+
+  .restaurants__card {
+      width: 100%;
+      height: auto;
+
+  }
+
   .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
@@ -280,4 +306,24 @@ header {
     column-gap: 82px;
     row-gap: 32px;
   }
+
+  .functionality__media {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-right: 207px;
+  gap: 24px;
+
+    .functionality__step {
+      width: 100%;
+    }
+  }
+
+.footer__links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px
+}
+
 }

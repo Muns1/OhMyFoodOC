@@ -45,6 +45,7 @@
          <!-- Fonctionnement -->
          <div class="functionality">
             <h3>Fonctionnement</h3>
+            <div class="functionality__media">
             <div class="functionality__step">
                <div class="functionality__step-number">
                   <span>1</span>
@@ -74,65 +75,76 @@
                   <p>Dégustez au restaurant</p>
                </div>
             </div>
+            </div>
          </div>
 
       <!-- Restaurants -->
       <section class="restaurants">
          <h3>Restaurants</h3>
          <div class="restaurants__cards">
-            <article class="restaurants__card">
-               <div class="restaurants__card-ribbon">Nouveau</div>
-               <img src="./restaurants/Lapalette.jpg" alt="Assiette de nourriture">
-               <div class="card-content">
-                  <div class="restaurants__card-text">
-                     <h4 class="restaurants__card-title">La palette du goût</h4>
-                     <p class="restaurants__card-subtitle">Ménilmontant</p>
+            <a href="restaurant1.html">
+               <article class="restaurants__card">
+                  <div class="restaurants__card-ribbon">Nouveau</div>
+                  <img src="./restaurants/Lapalette.jpg" alt="Assiette de nourriture">
+                  <div class="card-content">
+                     <div class="restaurants__card-text">
+                        <h4 class="restaurants__card-title">La palette du goût</h4>
+                        <p class="restaurants__card-subtitle">Ménilmontant</p>
+                     </div>
+                     <div class="restaurants__card-like">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
                   </div>
-                  <div class="restaurants__card-like">
-                     <i class="fa-regular fa-heart"></i>
+               </article>
+            </a>
+            <a href="restaurant3.html">
+               <article class="restaurants__card">
+                  <div class="restaurants__card-ribbon">Nouveau</div>
+                  <img src="./restaurants/Lanote.jpg" alt="Assiette de nourriture">
+                  <div class="card-content">
+                     <div class="restaurants__card-text">
+                        <h4 class="restaurants__card-title">La note enchantée</h4>
+                        <p class="restaurants__card-subtitle">Charonne</p>
+                     </div>
+                     <input type="checkbox" id="heart-toggle">
+                     <div class="restaurants__card-like">
+                     <label for="heart-toggle">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                     </label>
+                     </div>
                   </div>
-               </div>
-            </article>
+               </article>
+            </a>
 
-            <article class="restaurants__card">
-               <div class="restaurants__card-ribbon">Nouveau</div>
-               <img src="./restaurants/Lanote.jpg" alt="Assiette de nourriture">
-               <div class="card-content">
-                  <div class="restaurants__card-text">
-                     <h4 class="restaurants__card-title">La note enchantée</h4>
-                     <p class="restaurants__card-subtitle">Charonne</p>
+            <a href="restaurant4.html">
+               <article class="restaurants__card">
+                  <img src="./restaurants/Alafrancaise.jpg" alt="Assiette de nourriture">
+                  <div class="card-content">
+                     <div class="restaurants__card-text">
+                        <h4 class="restaurants__card-title">À la française</h4>
+                        <p class="restaurants__card-subtitle">Cité Rouge</p>
+                     </div>
+                     <div class="restaurants__card-like">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
                   </div>
-                  <div class="restaurants__card-like">
-                     <i class="fa-regular fa-heart"></i>
+               </article>
+            </a>
+            <a href="restaurant2.html">
+               <article class="restaurants__card">
+                  <img src="./restaurants/Ledelice.jpg" alt="Assiette de nourriture">
+                  <div class="card-content">
+                     <div class="restaurants__card-text">
+                        <h4 class="restaurants__card-title">Le délice des sens</h4>
+                        <p class="restaurants__card-subtitle">Folie-Méricourt</p>
+                     </div>
+                     <div class="restaurants__card-like">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
                   </div>
-               </div>
-            </article>
-
-            <article class="restaurants__card">
-               <img src="./restaurants/Alafrancaise.jpg" alt="Assiette de nourriture">
-               <div class="card-content">
-                  <div class="restaurants__card-text">
-                     <h4 class="restaurants__card-title">À la française</h4>
-                     <p class="restaurants__card-subtitle">Cité Rouge</p>
-                  </div>
-                  <div class="restaurants__card-like">
-                     <i class="fa-regular fa-heart"></i>
-                  </div>
-               </div>
-            </article>
-
-            <article class="restaurants__card">
-               <img src="./restaurants/Ledelice.jpg" alt="Assiette de nourriture">
-               <div class="card-content">
-                  <div class="restaurants__card-text">
-                     <h4 class="restaurants__card-title">Le délice des sens</h4>
-                     <p class="restaurants__card-subtitle">Folie-Méricourt</p>
-                  </div>
-                  <div class="restaurants__card-like">
-                     <i class="fa-regular fa-heart"></i>
-                  </div>
-               </div>
-            </article>
+               </article>
+            </a>
          </div>
       </section>
    </main>

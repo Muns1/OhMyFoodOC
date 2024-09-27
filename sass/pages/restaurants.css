@@ -74,12 +74,12 @@ hr {
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   background-color: #f6f6f6;
   padding: 32px 12px 40px 12px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  top: 283px;
+  margin-top: -60px;
   width: 100vw;
 }
 .menu__title {
@@ -158,4 +158,26 @@ hr {
   font-style: normal;
   line-height: 17.63px;
   white-space: nowrap;
+}
+
+.commander {
+  background-color: #f6f6f6;
+}
+.commander__button {
+  margin-top: 27px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  padding: 16px 48px;
+  margin: 0 auto;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18.75px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: all 0.8s ease-in-out;
 }/*# sourceMappingURL=restaurants.css.map */

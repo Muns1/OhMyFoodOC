@@ -10,12 +10,12 @@
 
 
 .menu {
-    position: absolute;
+    position: relative;
     background-color: $main-bg-color;
     padding: 32px 12px 40px 12px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    top: 283px;
+    margin-top: -60px;
     width: 100vw;
 
     &__title {
@@ -89,5 +89,24 @@
                 white-space: nowrap;
             }
         }
+    }
+}
+.commander {
+    background-color: $main-bg-color;
+
+    &__button {
+        margin-top: 27px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(0deg, $main-color -11.44%, #FF79DA 123.93%);
+        padding: 16px 48px;
+        margin: 0 auto;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        @include font(null, null, 500, 18.75px);
+        @include box-shadow($shadow-small);
+        transition: all 0.8s ease-in-out;   
     }
 }
