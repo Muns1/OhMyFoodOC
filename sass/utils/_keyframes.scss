@@ -1,3 +1,4 @@
+// Flash Animation
 @keyframes opacityAnimation {
     0% {
       opacity: 1;
@@ -16,3 +17,54 @@
       display: none;
     }    
   }
+
+// index loader spin animation
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  .loader-container:after {
+    content: '';
+    display: none;
+    animation: showContent 2s ease 2s forwards;
+  }
+  
+  @keyframes showContent {
+    to {
+      display: block;
+    }
+  }
+  
+  .content {
+    animation: show 0s ease 4s forwards;
+  }
+  
+  @keyframes show {
+    100% {
+      display: block;
+    }
+  }
+
+
+  // Slide restaurant animation item - gradually make them appear and put them in their place
+
+
+  @keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
