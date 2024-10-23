@@ -289,16 +289,13 @@ h3 {
   cursor: pointer;
   display: inline-block;
 }
-.restaurants .restaurants__card .card-content .restaurants__card-like i:hover {
-  color: #333;
-}
 .restaurants .restaurants__card .restaurants__card-ribbon {
   position: absolute;
   top: 10px;
   right: 10px;
   background-color: #99e2d0;
   padding: 7px 9px 6px 9px;
-  border-radius: 5px;
+  border-radius: 2px;
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 500;
@@ -362,8 +359,13 @@ a {
   animation: flashAnimation 4s forwards;
 }
 
-#heart-toggle {
+input[type=checkbox] {
   display: none;
+}
+
+.fa-heart {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
 }
 
 .restaurants__card-like label i {
@@ -373,11 +375,20 @@ a {
   cursor: pointer;
 }
 
-#heart-toggle:checked + .restaurants__card-like label i {
+.restaurants__card-like label i:hover {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
   color: transparent;
+  -webkit-text-stroke: 0px;
+}
+
+input[type=checkbox]:checked ~ .restaurants__card-like label i {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0px;
   content: "\f004";
 }
 
@@ -391,8 +402,8 @@ a {
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index: 9999; /* Ensure it's on top of everything */
-  animation: fadeOut 2s ease 1s forwards; /* Fade out after 2 seconds */
+  z-index: 9999;
+  animation: fadeOut 2s ease 1s forwards;
 }
 
 /* Loader animation */
@@ -410,8 +421,17 @@ a {
     padding: 30px 0px 0px 180px;
     margin: 0px;
   }
+  .exploration {
+    padding-bottom: 30px;
+  }
   .exploration h3 {
     padding: 0;
+    font-size: 40px;
+    margin-bottom: 38px;
+  }
+  .exploration p {
+    font-weight: 300;
+    font-size: 18px;
   }
   .restaurants h3 {
     margin-top: 48px;
@@ -426,7 +446,7 @@ a {
   .restaurants__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 100px; /* Spacing between cards */
+    gap: 100px;
     row-gap: 50px;
     width: 80%;
     justify-content: center;
@@ -460,5 +480,14 @@ a {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+  }
+  .footer__links li:nth-child(2) {
+    margin-right: 25px;
+  }
+  .footer__links li:nth-child(4) {
+    margin-right: 55px;
+  }
+  header .header__logo, header .header__location {
+    box-shadow: none;
   }
 }/*# sourceMappingURL=styles.css.map */

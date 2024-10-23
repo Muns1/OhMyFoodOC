@@ -21,8 +21,11 @@
     <div>
        <div class="flash__animation"></div>
        <!-- Header -->
-       <header>         
+       <header>    
           <section class="header__logo">
+            <a href="index.html">
+               <i class="fa-solid fa-arrow-left"></i>
+            </a>       
              <img src="./style/ohmyfood@2x.svg" alt="Logo OhMyFood" class="header__logo-image">
           </section>
           <section>
@@ -37,7 +40,12 @@
          <section class="menu">
             <div class="menu__title">
                 <h1>La palette du goût</h1>
-                <i class="fa-regular fa-heart"></i>
+                <input type="checkbox" id="heart-toggle-1">
+                <div class="restaurants__card-like">
+                <label for="heart-toggle-1">
+                   <i class="fa-solid fa-heart"></i>
+                </label>
+                </div>
             </div>
             <div class="menu__section menu__section--starters">
                 <h2 class="menu__section-title">ENTRÉES</h2>
@@ -47,6 +55,7 @@
                         <p class="menu__item-description">Au piment d'Espelette</p>
                         <p class="menu__item-price">25€</p>
                    </div>
+                   <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 
 
@@ -56,6 +65,7 @@
                         <p class="menu__item-description">Et ses copeaux de truffe noire</p>
                         <p class="menu__item-price">35€</p>
                    </div>
+                   <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="menu__item">
                   <h3 class="menu__item-title">Œuf au plat</h3>
@@ -63,6 +73,7 @@
                       <p class="menu__item-description">Assaisonné à la truffe sur lit de caviar</p>
                       <p class="menu__item-price">20€</p>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
             </div>
         
@@ -74,6 +85,7 @@
                       <p class="menu__item-description">Accompagné de sa ribambelle de légumes</p>
                       <p class="menu__item-price">40€</p>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="menu__item">
                   <h3 class="menu__item-title">Parmentier de queue de bœuf</h3>
@@ -81,14 +93,15 @@
                       <p class="menu__item-description">À la truffe noire sur sa purée de panais</p>
                       <p class="menu__item-price">35€</p>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="menu__item">
                   <h3 class="menu__item-title">Filet de turbot</h3>
                   <div class="menu__item-details">
                       <p class="menu__item-description">Aux agrumes</p>
                       <p class="menu__item-price">44€</p>
-                      <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
             </div>
         
@@ -100,6 +113,7 @@
                       <p class="menu__item-description">Revisité</p>
                       <p class="menu__item-price">18€</p>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="menu__item">
                   <h3 class="menu__item-title">Macaron au chocolat d'exception</h3>
@@ -107,6 +121,7 @@
                       <p class="menu__item-description">Et glace à la vanille de Madagascar</p>
                       <p class="menu__item-price">22€</p>
                  </div>
+                 <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="menu__item">
                   <h3 class="menu__item-title">Mousse au chocolat</h3>
@@ -114,6 +129,7 @@
                       <p class="menu__item-description">Au piment d'Espelette et à la truffe noire</p>
                       <p class="menu__item-price">23€</p>
                   </div>
+                  <span class="menu__item-check"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
             </div>
             
@@ -133,7 +149,7 @@
             </div>
             <ul class="footer__links">
                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-               <li><i class="fa-solid fa-handshake-angle"></i></i>Devenir partenaire</li>
+               <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
                <li class="footer__links-text">Mentions légales</li>
                <li class="footer__links-text">Contact</li>
             </ul>
